@@ -1,10 +1,11 @@
 /*
-Problema das 8 Damas
+8 Queens Problem
 */
 
 #include <stdio.h>
 
-void printarTabuleiro(int tabuleiro[8][8]) {
+// Function to print the chessboard
+void printBoard(int board[8][8]) {
     int i, j;
     printf("   ");
     for (i = 0; i < 8; i++) {
@@ -15,9 +16,9 @@ void printarTabuleiro(int tabuleiro[8][8]) {
     for (i = 0; i < 8; i++) {
         printf(" %d ", 8 - i);
         for (j = 0; j < 8; j++) {
-            if (tabuleiro[i][j] == 1) {
+            if (board[i][j] == 1) {
                 printf(" Q ");
-            } else if (tabuleiro[i][j] == -1) {
+            } else if (board[i][j] == -1) {
                 printf(" * ");
             } else {
                 printf(" . ");
@@ -33,24 +34,26 @@ void printarTabuleiro(int tabuleiro[8][8]) {
     printf("\n");
 }
 
-void colocarDama(int tabuleiro[8][8]) {
+// Function to place a queen on the board
+void placeQueen(int board[8][8]) {
     int x, y, i, j;
 
+    // Loop to get valid queen position from user
     do {
-        printf("Digite a posicao da dama em X: ");
+        printf("Enter the X position of the queen: ");
         scanf("%d", &x);
 
-        printf("Digite a posicao da dama em Y: ");
+        printf("Enter the Y position of the queen: ");
         scanf("%d", &y);
 
         if (x < 1 || x > 8 || y < 1 || y > 8) {
-            printf("Posicao fora do tabuleiro. Tente novamente.\n");
+            printf("Position out of the board. Try again.\n");
             continue;
         }
 
-        // Verificar se a posicao não é -1
-        if (tabuleiro[8 - y][x - 1] == -1) {
-            printf("Posicao invalida. Tente novamente.\n");
+        // Check if the position is not -1
+        if (board[8 - y][x - 1] == -1) {
+            printf("Invalid position. Try again.\n");
         } else {
             break;
         }
@@ -59,29 +62,29 @@ void colocarDama(int tabuleiro[8][8]) {
     y = 8 - y;
     x -= 1;
     
-    tabuleiro[y][x] = 1;
-    printf("Dama colocada na posicao X %d e Y %d\n", x + 1, 8 - y);
+    board[y][x] = 1;
+    printf("Queen placed at position X %d and Y %d\n", x + 1, 8 - y);
 
-    // Colocar -1 nas vertical
+    // Mark vertical positions with -1
     for (i = 0; i < 8; i++) {
-        if(tabuleiro[i][x] == 0) {
-            tabuleiro[i][x] = -1;
+        if(board[i][x] == 0) {
+            board[i][x] = -1;
         }
     }
 
-    // Colocar -1 nas horizontais
+    // Mark horizontal positions with -1
     for (i = 0; i < 8; i++) {
-        if(tabuleiro[y][i] == 0) {
-            tabuleiro[y][i] = -1;
+        if(board[y][i] == 0) {
+            board[y][i] = -1;
         }
     }
 
-    // Colocar -1 nas diagonais
+    // Mark diagonal positions with -1
     for (i = 0; i < 8; i++) {
         for (j = 0; j < 8; j++) {
-            if(tabuleiro[i][j] == 0) {
+            if(board[i][j] == 0) {
                 if(i - j == y - x || i + j == y + x) {
-                    tabuleiro[i][j] = -1;
+                    board[i][j] = -1;
                 }
             }
         }
@@ -90,15 +93,15 @@ void colocarDama(int tabuleiro[8][8]) {
 }
 
 int main() {
-    int tabuleiro[8][8] = {0};
+    int board[8][8] = {0};
 
-    char continuar;
+    char continuePlacing;
     do {
-        colocarDama(tabuleiro);
-        printarTabuleiro(tabuleiro);
-        printf("Deseja colocar outra dama? (s/n): ");
-        scanf(" %c", &continuar);
-    } while (continuar == 's' || continuar == 'S');
+        placeQueen(board);
+        printBoard(board);
+        printf("Do you want to place another queen? (y/n): ");
+        scanf(" %c", &continuePlacing);
+    } while (continuePlacing == 'y' || continuePlacing == 'Y');
 
     return 0;
 }
