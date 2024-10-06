@@ -9,7 +9,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 <table>
   <tr>
     <td align="center">
-      <a href="#" title="defina o título do link">
+      <a href="https://github.com/leandro-nnogueira" title="Leandro">
         <img src="https://avatars.githubusercontent.com/u/157415649?v=4" width="100px;" alt="Foto do Leandro no GitHub"/><br>
         <sub>
           <b>Leandro</b>
@@ -17,7 +17,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#" title="defina o título do link">
+      <a href="https://github.com/kaiossoares" title="Kaio">
         <img src="https://avatars.githubusercontent.com/u/105795580?v=4" width="100px;" alt="Foto do Kaio"/><br>
         <sub>
           <b>Kaio</b>
@@ -25,7 +25,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="#" title="defina o título do link">
+      <a href="https://github.com/WendSpy" title="Wenderson">
         <img src="https://avatars.githubusercontent.com/u/171278551?v=4" width="100px;" alt="Foto do Wenderson"/><br>
         <sub>
           <b>Wenderson</b>
