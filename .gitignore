@@ -1,0 +1,10 @@
+# Ignore output files
+*.out
+*.exe
+*.o
+
+# Ignome output folder
+output/
+
+# Ignore Visual Studio Code settings
+.vscode/
