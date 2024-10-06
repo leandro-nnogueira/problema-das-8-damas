@@ -2,7 +2,13 @@
 
 >  O problema das oito damas é o problema matemático de dispor oito damas em um tabuleiro de xadrez de dimensão 8x8, de forma que nenhuma delas seja atacada por outra. Para tanto, é necessário que duas damas quaisquer não estejam numa mesma linha, coluna, ou diagonal.
 
+### feito com
+
+* ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+
 ## 🤝 Colaboradores
+
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
   <tr>
