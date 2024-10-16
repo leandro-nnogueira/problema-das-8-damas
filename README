@@ -21,11 +21,7 @@ O problema das 8 damas é um problema clássico de inteligência artificial e te
     # Exemplo para Python
     python solver.py
     ```
-
-## Estrutura do Projeto
-
-- `solver.py`: Contém a lógica para resolver o problema das 8 damas.
-- `README.md`: Este arquivo, contendo informações sobre o projeto.
+Este arquivo, contendo informações sobre o projeto.
 
 ## Licença
 
