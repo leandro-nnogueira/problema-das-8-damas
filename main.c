@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define N 25
+#define N 8
 
 void imprimirSolucao(int tabuleiro[N][N]) {
     // Função para imprimir a solução do tabuleiro
@@ -74,7 +74,5 @@ bool resolverNQ() {
 int main() {
     // Inicia a resolução do problema das N rainhas
     resolverNQ();
-    return 0;
-}
     return 0;
 }
